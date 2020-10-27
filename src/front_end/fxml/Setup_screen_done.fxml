@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity"  maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2abf9e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.Setup_screen_done">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c9079" height="81.0" layoutX="10.0" layoutY="20.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="580.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeff2" height="258.0" layoutX="9.0" layoutY="142.0" stroke="WHITE" strokeType="INSIDE" width="580.0" />
+      <Text layoutX="129.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You are all done " textAlignment="CENTER" wrappingWidth="342.517578125">
+         <font>
+            <Font name="Berlin Sans FB" size="48.0" />
+         </font>
+      </Text>
+      <Text fill="#16ab8a" layoutX="276.0" layoutY="75.0" stroke="#1e1e1e" strokeType="OUTSIDE" strokeWidth="0.2" text="DataBase Setup" wrappingWidth="200.0">
+         <font>
+            <Font name="Agency FB Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text fill="#1f3980" layoutX="98.0" layoutY="75.0" stroke="#1e1e1e" strokeType="OUTSIDE" strokeWidth="0.0" text="MyAccounter" wrappingWidth="167.818359375">
+         <font>
+            <Font name="Agency FB Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text fx:id="status" fill="#6a59d9" layoutX="325.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error Connecting" textAlignment="CENTER" visible="false" wrappingWidth="248.517578125">
+         <font>
+            <Font name="Berlin Sans FB" size="27.0" />
+         </font>
+      </Text>
+      <Text fx:id="loadbar_text" fill="#153da1" layoutX="62.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testing Connection ..." textAlignment="CENTER" visible="false" wrappingWidth="143.0">
+         <font>
+            <Font name="Berlin Sans FB" size="16.0" />
+         </font>
+      </Text>
+      <Pane fx:id="Start" layoutX="175.0" layoutY="285.0" onMouseEntered="#hover_start" onMouseExited="#end_hover_start" onMousePressed="#Start_MyAccounter" prefHeight="81.0" prefWidth="250.0" style="-fx-background-color: #2abf9e;">
+         <children>
+            <Label layoutX="36.0" layoutY="18.0" prefHeight="45.0" prefWidth="179.0" text="Start Working" textFill="#1c8069">
+               <font>
+                  <Font name="Agency FB Bold" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Text layoutX="83.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="click below to start" wrappingWidth="262.0">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font>
+      </Text>
+      <Text fill="#da2d2d" layoutX="345.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MyAccounter" textAlignment="CENTER" wrappingWidth="178.517578125">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

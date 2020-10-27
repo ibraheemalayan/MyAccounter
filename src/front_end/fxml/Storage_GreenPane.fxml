@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="green_pane" prefHeight="850.0" prefWidth="320.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.Storage_GreenPane_Controller">
+   <children>
+      <Pane prefHeight="85.0" prefWidth="320.0" style="-fx-background-color: #2abf9e;">
+         <children>
+            <Text fill="#1c8069" layoutX="168.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="22.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/packing-2.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane prefHeight="145.0" prefWidth="320.0">
+         <children>
+            <Pane layoutX="20.0" layoutY="25.0" prefHeight="120.0" prefWidth="280.0" style="-fx-background-color: #eeeff2;">
+               <children>
+                  <Text fx:id="Products_count" fill="#79828b" layoutX="21.0" layoutY="63.0" onMouseClicked="#click" strokeType="OUTSIDE" strokeWidth="0.0" text="215 ">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="68.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#79828b" layoutX="21.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="product in the storage">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="63.0" fitWidth="90.0" layoutX="198.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/contract.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="10.0" layoutY="95.0" prefHeight="240.0" prefWidth="320.0">
+         <children>
+            <Pane layoutX="20.0" layoutY="25.0" prefHeight="212.0" prefWidth="280.0" style="-fx-background-color: #eeeff2;">
+               <children>
+                  <Text fx:id="Products_count1" fill="#79828b" layoutX="21.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mostly sold  ">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="37.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#79828b" layoutX="15.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last week">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#79828b" layoutX="15.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last 24H">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#79828b" layoutX="15.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last month">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="220.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/finances.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="10.0" layoutY="240.0" prefHeight="380.0" prefWidth="320.0">
+         <children>
+            <Pane layoutX="20.0" layoutY="25.0" prefHeight="355.0" prefWidth="280.0" style="-fx-background-color: #eeeff2;">
+               <children>
+                  <Text fx:id="Products_count11" fill="#79828b" layoutX="21.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last added">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="37.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="20.0" layoutY="70.0" prefHeight="285.0" prefWidth="240.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Pane prefHeight="32.0" prefWidth="240.0" style="-fx-border-width: 2; -fx-border-color: #79828b;">
+                           <children>
+                              <Text fill="#79828b" layoutX="48.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 - 29 - 2018 :: 9 : 50 :8">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="240.0" style="-fx-border-width: 2; -fx-border-color: #79828b;">
+                           <children>
+                              <Text fill="#79828b" layoutX="48.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 - 29 - 2018 :: 9 : 50 :8">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="240.0" style="-fx-border-width: 2; -fx-border-color: #79828b;">
+                           <children>
+                              <Text fill="#79828b" layoutX="48.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 - 29 - 2018 :: 9 : 50 :8">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="240.0" style="-fx-border-width: 2; -fx-border-color: #79828b;">
+                           <children>
+                              <Text fill="#79828b" layoutX="48.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 - 29 - 2018 :: 9 : 50 :8">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>

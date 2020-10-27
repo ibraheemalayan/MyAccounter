@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.stage.Stage?>
+
+<Stage fx:id="New_Product_Stage" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.New_Product_Controller">
+    <scene>
+        <Scene>
+            <AnchorPane prefHeight="200" prefWidth="200">
+            <children>
+               <Pane fx:id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #FBFBFB;">
+                  <children>
+                     <Pane layoutX="50.0" layoutY="670.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="450.0" style="-fx-background-color: #eeeff2;">
+                        <children>
+                           <Text fx:id="version_kind_txt" fill="#66cca7" layoutX="60.0" layoutY="22.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Premium">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#fa8073" layoutX="180.0" layoutY="22.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="MyAccounter" wrappingWidth="106.189453125">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fx:id="Version_txt" fill="#f1c40f" layoutX="361.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.3.1" wrappingWidth="40.0">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#92a3b2" layoutX="345.0" layoutY="22.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="v." wrappingWidth="17.939453125">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </Pane>
+                     <Pane layoutX="15.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="520.0" style="-fx-background-color: #eeeff2;">
+                        <children>
+                           <Text fill="#79828b" layoutX="20.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Product">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="68.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#92a3b2" layoutX="21.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adds new product to the Database">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <ImageView fitHeight="54.0" fitWidth="51.0" layoutX="443.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../icons/box-2.png" />
+                              </image>
+                           </ImageView>
+                        </children>
+                     </Pane>
+                     <Pane layoutX="550.0" prefHeight="700.0" prefWidth="550.0" style="-fx-background-color: #eeeff2;">
+                        <children>
+                           <Rectangle fx:id="Name_message_arrow" fill="#f9e79f" height="20.0" layoutX="460.0" layoutY="185.0" rotate="45.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="20.0" />
+                           <Rectangle fx:id="Cancel_Rect" arcHeight="15.0" arcWidth="15.0" fill="#fbfbfb" height="65.0" layoutX="60.0" layoutY="585.0" onMouseClicked="#Cancel_Pane_Clicked" onMouseEntered="#Cancel_Pane_Entered" onMouseExited="#Cancel_Pane_Exited" stroke="#fa8072a8" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+                           <Line fx:id="Close_Line_1" endX="-70.0" endY="20.0" layoutX="595.0" layoutY="25.0" startX="-90.0" stroke="#ababab" strokeWidth="3.0" />
+                           <Line fx:id="Close_Line_2" endX="-70.0" endY="20.0" fill="#0084ff00" layoutX="595.0" layoutY="25.0" rotate="90.0" startX="-90.0" stroke="#ababab" strokeWidth="3.0" />
+                           <Rectangle fx:id="Close_button" arcHeight="5.0" arcWidth="5.0" fill="#a1a1a100" height="40.0" layoutX="495.0" layoutY="15.0" onMouseClicked="#Exit_Pane_Clicked" onMouseEntered="#Exit_Pane_Entered" onMouseExited="#Exit_Pane_Exited" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" />
+                           <Pane layoutX="25.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #FBFBFB;">
+                              <children>
+                                 <Text fill="#92a3b2" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the product">
+                                    <font>
+                                       <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                                    </font>
+                                 </Text>
+                                 <TextField fx:id="Name_Field" layoutX="187.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Name" style="-fx-background-color: #eeeff2;">
+                                    <font>
+                                       <Font name="Berlin Sans FB" size="23.0" />
+                                    </font>
+                                    <cursor>
+                                       <Cursor fx:constant="TEXT" />
+                                    </cursor>
+                                 </TextField>
+                                 <Text fill="#f1c40f" layoutX="409.0" layoutY="35.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="45 Max">
+                                    <font>
+                                       <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                    </font>
+                                 </Text>
+                                 <ImageView fx:id="Warning_img_Name" fitHeight="25.0" fitWidth="25.0" layoutX="435.0" layoutY="58.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                       <Image url="@../icons/warning.png" />
+                                    </image>
+                                    <effect>
+                                       <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                                          <bumpInput>
+                                             <Shadow />
+                                          </bumpInput>
+                                          <light>
+                                             <Light.Distant color="#dd3c2a" />
+                                          </light>
+                                       </Lighting>
+                                    </effect>
+                                 </ImageView>
+                                 <ImageView fx:id="name_img" fitHeight="30.0" fitWidth="30.0" layoutX="433.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@../icons/tag.png" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </Pane>
+                           <Pane layoutX="25.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #FBFBFB;">
+                              <children>
+                                 <Text fill="#92a3b2" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standard selling price">
+                                    <font>
+                                       <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                                    </font>
+                                 </Text>
+                                 <TextField fx:id="Price_Field" layoutX="187.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Price" style="-fx-background-color: #eeeff2;">
+                                    <font>
+                                       <Font name="Berlin Sans FB" size="23.0" />
+                                    </font>
+                                    <opaqueInsets>
+                                       <Insets />
+                                    </opaqueInsets>
+                                    <cursor>
+                                       <Cursor fx:constant="TEXT" />
+                                    </cursor>
+                                 </TextField>
+                                 <Text fill="#f1c40f" layoutX="391.0" layoutY="36.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="10^6 Max">
+                                    <font>
+                                       <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                    </font>
+                                 </Text>
+                                 <ImageView fx:id="Warning_img_price" fitHeight="25.0" fitWidth="25.0" layoutX="435.0" layoutY="58.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                       <Image url="@../icons/warning.png" />
+                                    </image>
+                                    <effect>
+                                       <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                                          <bumpInput>
+                                             <Shadow />
+                                          </bumpInput>
+                                          <light>
+                                             <Light.Distant color="#dd3c2a" />
+                                          </light>
+                                       </Lighting>
+                                    </effect>
+                                 </ImageView>
+                                 <ImageView fx:id="price_img" fitHeight="30.0" fitWidth="30.0" layoutX="433.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@../icons/price-tag-4.png" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </Pane>
+                           <Text fill="SALMON" layoutX="25.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="required field">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fill="SALMON" layoutX="25.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="required field">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Pane layoutX="25.0" layoutY="400.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #FBFBFB;">
+                              <children>
+                                 <Text fill="#92a3b2" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buying price">
+                                    <font>
+                                       <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                                    </font>
+                                 </Text>
+                                 <TextField fx:id="Buy_Price_Field" layoutX="187.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="Price" style="-fx-background-color: #eeeff2;">
+                                    <font>
+                                       <Font name="Berlin Sans FB" size="23.0" />
+                                    </font>
+                                    <cursor>
+                                       <Cursor fx:constant="TEXT" />
+                                    </cursor>
+                                 </TextField>
+                                 <Text fill="#f1c40f" layoutX="391.0" layoutY="36.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="10^6 Max">
+                                    <font>
+                                       <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                    </font>
+                                 </Text>
+                                 <ImageView fx:id="Warning_img_buy_price" fitHeight="25.0" fitWidth="25.0" layoutX="435.0" layoutY="58.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                       <Image url="@../icons/warning.png" />
+                                    </image>
+                                    <effect>
+                                       <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                                          <bumpInput>
+                                             <Shadow />
+                                          </bumpInput>
+                                          <light>
+                                             <Light.Distant color="#dd3c2a" />
+                                          </light>
+                                       </Lighting>
+                                    </effect>
+                                 </ImageView>
+                                 <ImageView fx:id="buy_price_img" fitHeight="30.0" fitWidth="30.0" layoutX="433.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                       <Image url="@../icons/price-tag-4.png" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </Pane>
+                           <Text fill="SALMON" layoutX="25.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="required field">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Rectangle fx:id="Done_Rect" arcHeight="15.0" arcWidth="15.0" fill="#fbfbfb" height="65.0" layoutX="290.0" layoutY="585.0" onMouseClicked="#Done_Pane_Clicked" onMouseEntered="#Done_Pane_Entered" onMouseExited="#Done_Pane_Exited" stroke="#66cca8a8" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+                           <Text fx:id="Done_txt" fill="#66cca8eb" layoutX="304.0" layoutY="633.0" onMouseClicked="#Done_Pane_Clicked" onMouseEntered="#Done_Pane_Entered" strokeType="OUTSIDE" strokeWidth="0.0" text="Done">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="44.0" />
+                              </font>
+                           </Text>
+                           <ImageView fx:id="Cancel_img" fitHeight="40.0" fitWidth="40.0" layoutX="436.0" layoutY="598.0" onMouseClicked="#Done_Pane_Clicked" onMouseEntered="#Done_Pane_Entered" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../icons/checked.png" />
+                              </image>
+                           </ImageView>
+                           <Text fx:id="Cancel_txt" fill="#fa8073f5" layoutX="68.0" layoutY="632.0" onMouseClicked="#Cancel_Pane_Clicked" onMouseEntered="#Cancel_Pane_Entered" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="44.0" />
+                              </font>
+                           </Text>
+                           <ImageView fx:id="Cancel_img" fitHeight="40.0" fitWidth="40.0" layoutX="209.0" layoutY="596.0" onMouseClicked="#Cancel_Pane_Clicked" onMouseEntered="#Cancel_Pane_Entered" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../icons/cancel.png" />
+                              </image>
+                           </ImageView>
+                           <Text fill="#66cca780" layoutX="281.0" layoutY="682.0" strokeType="OUTSIDE" strokeWidth="0.0" text="can be edited later" textAlignment="CENTER" wrappingWidth="218.2119140625">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#fa807380" layoutX="51.0" layoutY="682.0" strokeType="OUTSIDE" strokeWidth="0.0" text="this draft will be deleted" textAlignment="CENTER" wrappingWidth="218.2119140625">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Rectangle fx:id="Name_message_bubble" arcHeight="20.0" arcWidth="20.0" fill="#f9e79f" height="29.0" layoutX="270.0" layoutY="187.0" stroke="#f09c9c00" strokeType="INSIDE" visible="false" width="232.0" />
+                           <Text fx:id="Name_message_txt" fill="#79828b" layoutX="294.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can't be more than 45 letters" textAlignment="CENTER" visible="false" wrappingWidth="192.431640625">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                              </font>
+                           </Text>
+                           <Rectangle fx:id="Price_message_arrow" fill="#f9e79f" height="20.0" layoutX="460.0" layoutY="345.0" rotate="45.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="20.0" />
+                           <Rectangle fx:id="Price_message_bubble" arcHeight="20.0" arcWidth="20.0" fill="#f9e79f" height="29.0" layoutX="270.0" layoutY="347.0" stroke="#f09c9c00" strokeType="INSIDE" visible="false" width="232.0" />
+                           <Text fx:id="Price_message_txt" fill="#79828b" layoutX="286.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="999 999 is the maximum value" textAlignment="CENTER" visible="false" wrappingWidth="207.431640625">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                              </font>
+                           </Text>
+                           <Rectangle fx:id="Buy_price_message_arrow" fill="#f9e79f" height="20.0" layoutX="460.0" layoutY="505.0" rotate="45.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="20.0" />
+                           <Rectangle fx:id="Buy_price_message_bubble" arcHeight="20.0" arcWidth="20.0" fill="#f9e79f" height="29.0" layoutX="270.0" layoutY="507.0" stroke="#f09c9c00" strokeType="INSIDE" visible="false" width="232.0" />
+                           <Text fx:id="Buy_price_message_txt" fill="#79828b" layoutX="294.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can't be Empty" textAlignment="CENTER" visible="false" wrappingWidth="192.431640625">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </Pane>
+                     <Pane layoutX="15.0" layoutY="185.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="520.0" style="-fx-background-color: #eeeff2;">
+                        <children>
+                           <Text fill="#79828b" layoutX="20.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Initial data">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+                              </font>
+                           </Text>
+                           <TextField fx:id="Sold_Field" layoutX="203.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="sold" style="-fx-background-color: #FBFBFB;">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="23.0" />
+                              </font>
+                              <cursor>
+                                 <Cursor fx:constant="TEXT" />
+                              </cursor>
+                           </TextField>
+                           <Text fill="#f1c40f" layoutX="425.0" layoutY="77.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="10^4 Max">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <TextField fx:id="Profits_Field" layoutX="203.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="0 $" style="-fx-background-color: #FBFBFB;">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="23.0" />
+                              </font>
+                              <cursor>
+                                 <Cursor fx:constant="TEXT" />
+                              </cursor>
+                           </TextField>
+                           <TextField fx:id="Countity_Field" layoutX="203.0" layoutY="83.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="280.0" promptText="countity" style="-fx-background-color: #FBFBFB;">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="23.0" />
+                              </font>
+                              <cursor>
+                                 <Cursor fx:constant="TEXT" />
+                              </cursor>
+                           </TextField>
+                           <Text fill="#f1c40f" layoutX="425.0" layoutY="149.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="10^4 Max">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#f1c40f" layoutX="425.0" layoutY="223.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="10^7 Max">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#92a3b2" layoutX="20.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Countity">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#92a3b2" layoutX="20.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sold number">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                              </font>
+                           </Text>
+                           <Text fill="#92a3b2" layoutX="20.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profits">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                              </font>
+                           </Text>
+                           <ImageView fx:id="countity_img" fitHeight="30.0" fitWidth="30.0" layoutX="451.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../icons/packing-2.png" />
+                              </image>
+                           </ImageView>
+                           <ImageView fx:id="sold_img" fitHeight="30.0" fitWidth="30.0" layoutX="448.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../icons/presentation-5.png" />
+                              </image>
+                           </ImageView>
+                           <ImageView fx:id="profits_img" fitHeight="28.0" fitWidth="28.0" layoutX="449.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../icons/coins.png" />
+                              </image>
+                           </ImageView>
+                           <ImageView fx:id="Warning_img_countity" fitHeight="25.0" fitWidth="25.0" layoutX="450.0" layoutY="90.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                              <image>
+                                 <Image url="@../icons/warning.png" />
+                              </image>
+                              <effect>
+                                 <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                                    <bumpInput>
+                                       <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                       <Light.Distant color="#dd3c2a" />
+                                    </light>
+                                 </Lighting>
+                              </effect>
+                           </ImageView>
+                           <ImageView fx:id="Warning_img_sold" fitHeight="25.0" fitWidth="25.0" layoutX="450.0" layoutY="168.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                              <image>
+                                 <Image url="@../icons/warning.png" />
+                              </image>
+                              <effect>
+                                 <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                                    <bumpInput>
+                                       <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                       <Light.Distant color="#dd3c2a" />
+                                    </light>
+                                 </Lighting>
+                              </effect>
+                           </ImageView>
+                           <ImageView fx:id="Warning_img_profits" fitHeight="25.0" fitWidth="25.0" layoutX="450.0" layoutY="242.0" opacity="0.75" pickOnBounds="true" preserveRatio="true" visible="false">
+                              <image>
+                                 <Image url="@../icons/warning.png" />
+                              </image>
+                              <effect>
+                                 <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                                    <bumpInput>
+                                       <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                       <Light.Distant color="#dd3c2a" />
+                                    </light>
+                                 </Lighting>
+                              </effect>
+                           </ImageView>
+                        </children>
+                     </Pane>
+                     <Text fill="#79828b" layoutX="19.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="optinal fields">
+                        <font>
+                           <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Pane layoutX="15.0" layoutY="545.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="520.0" style="-fx-background-color: #eeeff2;">
+                        <children>
+                           <Text fill="#92a3b2" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creation Date">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="26.0" />
+                              </font>
+                           </Text>
+                           <TextField fx:id="Date_Field" alignment="CENTER" editable="false" layoutX="183.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.6" prefHeight="40.0" prefWidth="300.0" promptText="ID Number" style="-fx-background-color: #FBFBFB;" text="Monday  :  4 / 22 / 2019">
+                              <font>
+                                 <Font name="Berlin Sans FB" size="24.0" />
+                              </font>
+                           </TextField>
+                           <Text fill="#f1c40f" layoutX="393.0" layoutY="36.0" opacity="0.75" strokeType="OUTSIDE" strokeWidth="0.0" text="UnEditable">
+                              <font>
+                                 <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                              </font>
+                           </Text>
+                        </children>
+                     </Pane>
+                     <Rectangle fx:id="data_message_arrow" fill="#f9e79f" height="20.0" layoutX="475.0" layoutY="513.0" rotate="45.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="20.0" />
+                     <Rectangle fx:id="data_message_bubble" arcHeight="20.0" arcWidth="20.0" fill="#f9e79f" height="25.0" layoutX="290.0" layoutY="514.0" stroke="#f09c9c00" strokeType="INSIDE" visible="false" width="232.0" />
+                     <Text fx:id="data_message_txt" fill="#79828b" layoutX="310.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digits only" textAlignment="CENTER" visible="false" wrappingWidth="192.431640625">
+                        <font>
+                           <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                        </font>
+                     </Text>
+                     <Line endX="1100.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                     <Line endX="1100.0" endY="700.0" startY="700.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                     <Line endY="700.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                     <Line endX="1100.0" endY="700.0" startX="1100.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                  </children>
+               </Pane>
+            </children></AnchorPane>
+        </Scene>
+    </scene>
+</Stage>

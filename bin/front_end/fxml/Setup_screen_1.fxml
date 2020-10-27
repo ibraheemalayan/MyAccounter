@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="all" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2abf9e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.Setup_screen_1_Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c9079" height="81.0" layoutX="10.0" layoutY="20.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="580.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeff2" height="258.0" layoutX="9.0" layoutY="142.0" stroke="WHITE" strokeType="INSIDE" width="580.0" />
+      <TextField fx:id="Connection_Address" layoutX="33.0" layoutY="200.0" onMouseClicked="#Connection_Address_clicked" opacity="0.49" prefHeight="40.0" prefWidth="267.0" style="-fx-background-color: #2abf9e;" text="Connection Address">
+         <font>
+            <Font name="Agency FB" size="21.0" />
+         </font>
+      </TextField>
+      <Text layoutX="33.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the connection proprties for the MySql server" textAlignment="CENTER" wrappingWidth="514.517578125">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#16ab8a" layoutX="26.0" layoutY="75.0" stroke="#1e1e1e" strokeType="OUTSIDE" strokeWidth="0.2" text="Welcome to                        DataBase Setup" wrappingWidth="551.818359375">
+         <font>
+            <Font name="Agency FB Bold" size="37.0" />
+         </font>
+      </Text>
+      <Label layoutX="33.0" layoutY="374.0" prefHeight="17.0" prefWidth="447.0" text="Connection String &gt;&gt; jdbc:mysql://localhost/Connection_Name?user=root&amp;password=root">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="553.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/customer-service-1.png" />
+         </image>
+      </ImageView>
+      <Text fill="#1f3980" layoutX="180.0" layoutY="75.0" stroke="#1e1e1e" strokeType="OUTSIDE" strokeWidth="0.0" text="MyAccounter" wrappingWidth="167.818359375">
+         <font>
+            <Font name="Agency FB Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text fx:id="status" fill="#6a59d9" layoutX="325.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connection  Succeeded" textAlignment="CENTER" visible="false" wrappingWidth="248.517578125">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="username" layoutX="33.0" layoutY="259.0" onMouseClicked="#username_clicked" opacity="0.49" prefHeight="40.0" prefWidth="267.0" style="-fx-background-color: #2abf9e;" text="Username">
+         <font>
+            <Font name="Agency FB" size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password" layoutX="33.0" layoutY="316.0" onMouseClicked="#password_clicked" opacity="0.49" prefHeight="40.0" prefWidth="267.0" style="-fx-background-color: #2abf9e;" text="Password">
+         <font>
+            <Font name="Agency FB" size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="418.0" layoutY="315.0" prefHeight="45.0" prefWidth="63.0" text="Next" textFill="#1c8069">
+         <font>
+            <Font name="Agency FB Bold" size="37.0" />
+         </font>
+      </Label>
+      <Pane fx:id="test_connection" layoutX="329.0" layoutY="254.0" onMouseEntered="#hover_test_connection" onMouseExited="#end_hover_test_connection" onMousePressed="#Test_Connection" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #2abf9e;">
+         <children>
+            <Label layoutX="19.0" layoutY="3.0" prefHeight="11.0" prefWidth="202.0" text="Test Connection" textFill="#1c8069">
+               <font>
+                  <Font name="Agency FB Bold" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="next" layoutX="329.0" layoutY="313.0" onMouseEntered="#hover_next" onMouseExited="#end_hover_next" onMousePressed="#Next_to_Setup_screen_2" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: #2abf9e;">
+         <children>
+            <Label layoutX="89.0" layoutY="3.0" prefHeight="45.0" prefWidth="63.0" text="Next" textFill="#1c8069">
+               <font>
+                  <Font name="Agency FB Bold" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

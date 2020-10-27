@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.stage.Stage?>
+
+<Stage fx:id="notification_stage" alwaysOnTop="true" minHeight="200.0" minWidth="350.0" resizable="false" title="no title" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.Raw_notification_window_Controller">
+   <scene>
+      <Scene>
+         <root>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200" prefWidth="350.0">
+               <children>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #eeeff2;">
+                     <children>
+                        <Line fx:id="Close_Line_1" endX="-70.0" endY="20.0" layoutX="396.0" layoutY="24.0" startX="-90.0" stroke="#ababab" strokeWidth="3.0" />
+                        <Line fx:id="Close_Line_2" endX="-70.0" endY="20.0" layoutX="396.0" layoutY="24.0" rotate="90.0" startX="-90.0" stroke="#ababab" strokeWidth="3.0" />
+                        <ImageView fitHeight="43.0" fitWidth="49.0" layoutX="26.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/error.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#6b6b6b" layoutX="94.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This name is already used" textAlignment="CENTER" wrappingWidth="216.9892578125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="Close_button" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="40.0" layoutX="296.0" layoutY="14.0" onMouseClicked="#Exit_Pane_Clicked" onMouseEntered="#Exit_Pane_Entered" onMouseExited="#Exit_Pane_Exited" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" />
+                        <Line endX="350.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                        <Line endX="350.0" endY="200.0" startY="200.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                        <Line endY="200.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                        <Line endX="350.0" endY="200.0" startX="350.0" stroke="#3f3f3f" strokeWidth="2.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

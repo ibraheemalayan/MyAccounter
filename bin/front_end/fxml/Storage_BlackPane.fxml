@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="black_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="740.0" style="-fx-background-color: #eeeff2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.Strorage_BlackPane_controller">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="740.0" style="-fx-background-color: #43484D;">
+         <children>
+            <Pane fx:id="Add_Pane" layoutX="27.0" layoutY="17.0" onMouseClicked="#New_Product">
+               <children>
+                  <Rectangle fx:id="add_rect" arcHeight="10.0" arcWidth="10.0" fill="#33373b" height="50.0" onMouseEntered="#hover_Add" onMouseExited="#end_hover_Add" stroke="#33373b" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="30.0" width="150.0" />
+                  <ImageView fx:id="Add_icon" fitHeight="36.0" fitWidth="38.0" layoutX="14.0" layoutY="7.0" onMouseEntered="#hover_Add" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/add.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="add_txt" fill="#1c8069" layoutX="66.0" layoutY="36.0" onMouseEntered="#hover_Add" strokeType="OUTSIDE" strokeWidth="0.0" text="Add">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Text fill="#c1cfdc" layoutX="320.0" layoutY="54.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Storage" textAlignment="CENTER" wrappingWidth="119.13671875">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="740.0">
+         <children>
+            <Pane layoutX="529.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="191.0" />
+            <Pane layoutX="20.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <VBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="700.0">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="700.0" style="-fx-background-color: #43484D;">
+                           <children>
+                              <Pane fx:id="Name_Rect" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sort_products_by_Name" prefHeight="40.0" prefWidth="220.0">
+                                 <children>
+                                    <Text boundsType="VISUAL" fill="#c1cfdc" layoutX="17.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="CENTER" wrappingWidth="78.69140625">
+                                       <font>
+                                          <Font name="Calibri Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="Name_img" fitHeight="20.0" fitWidth="20.0" layoutX="181.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@../icons/sort.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Line endX="100.0" endY="38.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#c1cfdc" strokeWidth="2.0" />
+                              <Pane fx:id="Price_Rect" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sort_products_by_Price" prefHeight="40.0" prefWidth="94.0">
+                                 <children>
+                                    <Text boundsType="VISUAL" fill="#c1cfdc" layoutX="-6.0" layoutY="28.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" textAlignment="CENTER" wrappingWidth="78.69140625">
+                                       <font>
+                                          <Font name="Calibri Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="Price_img" fitHeight="20.0" fitWidth="20.0" layoutX="64.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@../icons/sort.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Line endX="100.0" endY="38.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#c1cfdc" strokeWidth="2.0" />
+                              <Pane fx:id="Countity_Rect" layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sort_products_by_Count" prefHeight="40.0" prefWidth="94.0">
+                                 <children>
+                                    <Text boundsType="VISUAL" fill="#c1cfdc" layoutX="-4.0" layoutY="26.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Count" textAlignment="CENTER" wrappingWidth="78.69140625">
+                                       <font>
+                                          <Font name="Calibri Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="Count_img" fitHeight="20.0" fitWidth="20.0" layoutX="67.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@../icons/sort.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Line endX="100.0" endY="38.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#c1cfdc" strokeWidth="2.0" />
+                              <Pane fx:id="Profits_Rect" layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sort_products_by_Sold" prefHeight="40.0" prefWidth="94.0">
+                                 <children>
+                                    <Text boundsType="VISUAL" fill="#c1cfdc" layoutX="-8.0" layoutY="26.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Sold" textAlignment="CENTER" wrappingWidth="78.69140625">
+                                       <font>
+                                          <Font name="Calibri Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="Sold_img" fitHeight="20.0" fitWidth="20.0" layoutX="62.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@../icons/sort.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Line endX="100.0" endY="38.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#c1cfdc" strokeWidth="2.0" />
+                              <Pane fx:id="Sold_Rect" layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sort_products_by_Profits" prefHeight="40.0" prefWidth="94.0">
+                                 <children>
+                                    <Text boundsType="VISUAL" fill="#c1cfdc" layoutX="-2.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Profits" textAlignment="CENTER" wrappingWidth="78.69140625">
+                                       <font>
+                                          <Font name="Calibri Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="Profits_img" fitHeight="20.0" fitWidth="20.0" layoutX="71.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@../icons/sort.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Pane>
+                              <Line endX="100.0" endY="38.0" fill="#c1cfdc" layoutX="323.0" layoutY="11.0" startX="100.0" stroke="#c1cfdc" strokeWidth="2.0" />
+                              <Pane fx:id="Sold_Rect1" layoutX="520.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="94.0">
+                                 <children>
+                                    <Text boundsType="VISUAL" fill="#c1cfdc" layoutX="4.0" layoutY="25.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Buy price" textAlignment="CENTER" wrappingWidth="78.69140625">
+                                       <font>
+                                          <Font name="Calibri Bold" size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <ScrollPane fx:id="Items_scroller" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="700.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <VBox fx:id="items_vbox" maxWidth="-Infinity" minHeight="605.0" minWidth="-Infinity" prefWidth="700.0">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="688.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Black Big Hammer" textAlignment="CENTER" wrappingWidth="217.3717441558838">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="54" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="45345" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="4522" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="379.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="519.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="600.0" startX="-100.0" stroke="#c1cfdc" />
+                                    <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="688.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="White powder" textAlignment="CENTER" wrappingWidth="217.3717441558838">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0.24" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="22" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="12123" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="379.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="519.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="600.0" layoutX="111.0" layoutY="46.0" startX="-100.0" stroke="#c1cfdc" />
+                                    <HBox layoutX="10.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="688.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Paint brush 10 inches" textAlignment="CENTER" wrappingWidth="217.3717441558838">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="45" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="154" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="12645" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="379.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="519.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="65" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="600.0" layoutX="111.0" layoutY="82.0" startX="-100.0" stroke="#c1cfdc" />
+                                    <HBox layoutX="10.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="688.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="1/2 water pipe corner" textAlignment="CENTER" wrappingWidth="217.3717441558838">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="2110" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="199.9" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="122240" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="379.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="519.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="566" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="600.0" layoutX="111.0" layoutY="118.0" startX="-100.0" stroke="#c1cfdc" />
+                                    <HBox layoutX="10.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="688.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="shaminto abyad" textAlignment="CENTER" wrappingWidth="217.3717441558838">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="545" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="45" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="465.5" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="379.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="519.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="54.45" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="600.0" layoutX="111.0" layoutY="154.0" startX="-100.0" stroke="#c1cfdc" />
+                                    <HBox layoutX="10.0" layoutY="154.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="688.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="219.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="sugar and a frog" textAlignment="CENTER" wrappingWidth="217.3717441558838">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" scaleZ="0.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="12.5" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="131.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="3445" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="213.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="232.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="21" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="300.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="787" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <Line endX="100.0" endY="33.0" fill="#c1cfdc" layoutX="379.0" layoutY="11.0" startX="100.0" stroke="#6b6b6b" strokeWidth="2.0" />
+                                          <Pane layoutX="519.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="94.0">
+                                             <children>
+                                                <Text fill="#43484d" layoutY="24.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="0.2" textAlignment="CENTER" wrappingWidth="92.74658203124977">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="21.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="600.0" layoutX="111.0" layoutY="190.0" startX="-100.0" stroke="#c1cfdc" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children></Pane>
+            <Rectangle fill="#ffffff00" height="50.0" layoutX="136.0" layoutY="30.0" stroke="#43484d66" strokeType="INSIDE" strokeWidth="2.0" width="583.0" />
+            <TextField layoutX="170.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="500.0">
+               <font>
+                  <Font name="Agency FB" size="24.0" />
+               </font>
+            </TextField>
+            <Text fill="#2828284f" layoutX="276.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search is coming soon !! ">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="Search_icon" fitHeight="35.0" fitWidth="35.0" layoutX="676.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/search-magnifier-tool-outline.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle fill="#43484d00" height="50.0" layoutX="669.0" layoutY="30.0" stroke="#43484d66" strokeType="INSIDE" strokeWidth="2.0" width="50.0" />
+            <Rectangle fill="#1f93ff00" height="50.0" layoutX="20.0" layoutY="30.0" stroke="#43484d66" strokeType="INSIDE" strokeWidth="2.0" width="119.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Rectangle>
+            <Text fill="#ae545480" layoutX="33.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="asc">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="Sort_type_img" fitHeight="35.0" fitWidth="35.0" layoutX="96.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/sort%20asc.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front_end.Main_contorller">
+  <children>
+      <HBox prefHeight="825.0" prefWidth="1373.0">
+         <children>
+            <VBox prefHeight="850.0" prefWidth="320.0" style="-fx-background-color: #33373b;">
+               <children>
+                  <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="320.0">
+                     <children>
+                        <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="242.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/003-check.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#919ba6" layoutX="37.0" layoutY="54.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="MyAccounter" textAlignment="CENTER" wrappingWidth="187.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Text fill="#919ba6" opacity="0.33" stroke="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Bills" textAlignment="CENTER" wrappingWidth="320.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" layoutX="11.0" layoutY="100.0" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Pane fx:id="New_bill" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_New_bill" onMouseExited="#end_hover_main_menu_New_bill" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="New bill" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@..\icons\receipt.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="Unofficial_bill" layoutX="10.0" layoutY="215.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_Unofficial_bill" onMouseExited="#end_hover_main_menu_Unofficial_bill" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Unofficial bill" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/school-material.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="Recive_bill" layoutX="10.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_Recive_bill" onMouseExited="#end_hover_main_menu_Recive_bill" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Recive bill" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/check-mark.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="History" layoutX="10.0" layoutY="135.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_History" onMouseExited="#end_hover_main_menu_History" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="History" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/office-material-2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Text fill="#919ba6" layoutX="10.0" layoutY="123.0" opacity="0.33" stroke="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports" textAlignment="CENTER" wrappingWidth="320.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" layoutX="11.0" layoutY="134.0" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Pane fx:id="General" layoutX="10.0" layoutY="135.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_General" onMouseExited="#end_hover_main_menu_General" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="General" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/graph-5.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="This_month" layoutX="10.0" layoutY="295.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_this_month" onMouseExited="#end_hover_main_menu_this_month" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="This month" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/calendar-23.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="Today" layoutX="10.0" layoutY="335.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_today" onMouseExited="#end_hover_main_menu_today" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Today" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/weekly-calendar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" layoutX="11.0" layoutY="260.0" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Text fill="#919ba6" layoutX="10.0" layoutY="283.0" opacity="0.33" stroke="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="Goods" textAlignment="CENTER" wrappingWidth="320.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" layoutX="11.0" layoutY="420.0" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Pane fx:id="Storage" layoutX="10.0" layoutY="334.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#on_click_main_menu_storage" onMouseEntered="#hover_main_menu_storage" onMouseExited="#end_hover_main_menu_storage" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Storage" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/box-2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="Add" layoutX="10.0" layoutY="453.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_add" onMouseExited="#end_hover_main_menu_add" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Add" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/packing-2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" layoutX="11.0" layoutY="607.0" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Text fill="#919ba6" layoutX="10.0" layoutY="443.0" opacity="0.33" stroke="#515151" strokeType="OUTSIDE" strokeWidth="0.0" text="People" textAlignment="CENTER" wrappingWidth="320.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Line endX="320.0" endY="-3.106602191925049" fill="BLACK" layoutX="11.0" layoutY="454.0" stroke="#2c2c2c" strokeWidth="2.0" />
+                  <Pane fx:id="Customers" layoutX="10.0" layoutY="488.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_Customers" onMouseExited="#end_hover_main_menu_Customers" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/network.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="Merchants" layoutX="10.0" layoutY="488.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_Merchants" onMouseExited="#end_hover_main_menu_Merchants" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Merchants" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/boss-1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="Depts" layoutX="10.0" layoutY="641.0" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#hover_main_menu_Depts" onMouseExited="#end_hover_main_menu_Depts" prefHeight="40.0" prefWidth="320.0">
+                     <children>
+                        <Text fill="#919ba6" layoutX="104.0" layoutY="27.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Depts" wrappingWidth="153.13671875">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/money.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="green_pane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="850.0" prefWidth="320.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <fx:include source="Storage_GreenPane.fxml" />
+               </children>
+               
+            </VBox>
+            <VBox fx:id="black_pane" prefHeight="850.0" prefWidth="740.0" style="-fx-background-color: #eeeff2;">
+               <children>
+                  <Pane minWidth="-Infinity" prefHeight="85.0" prefWidth="760.0" style="-fx-background-color: #33373b;" />
+                  <fx:include source="Storage_BlackPane.fxml" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+  </children>
+</VBox>
